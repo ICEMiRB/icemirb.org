@@ -1,0 +1,4 @@
+baseURL = "https://icemirb.org"
+languageCode = "en-us"
+title = "ICEMiRB"
+theme = "grapes"
