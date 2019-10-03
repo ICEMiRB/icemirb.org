@@ -18,4 +18,4 @@ github: | clean html
 	  --committer "ICEMiRB Web Bot" \
 	  --message "Update website" \
 	  --force \
-	     ./site/public git@github.com:icemirb/icemirb.github.io
+	     ./site/public git@github.com:ICEMiRB/icemirb.github.io.git
