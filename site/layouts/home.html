@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main id="home">
+    <div>
+        <div class="avatar">
+            <img src="{{ .Site.Params.avatar }}">
+        </div>
+        <div id="content">
+          {{ .Content }}
+        </div>
+    </div>
+
+    <h1 class="banner">
+      The International Conference on Emacs, Minimalist Running, and Blogging
+    </h1>
+
+    <div id="recent-posts">
+        <h2>{{ i18n "recent_posts" }}</h2>
+        <ul>
+            {{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections).ByPublishDate.Reverse }}
+                <li>
+                    <span>{{- partial "date.html" . -}}</span>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+</main>
+{{ end }}

@@ -1,0 +1,3 @@
+[submodule "site/themes/hugo-bingo"]
+	path = site/themes/hugo-bingo
+	url = https://github.com/gundamew/hugo-bingo

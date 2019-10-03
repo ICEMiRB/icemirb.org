@@ -1,4 +1,22 @@
 baseURL = "https://icemirb.org"
 languageCode = "en-us"
 title = "ICEMiRB"
-theme = "grapes"
+theme = "hugo-bingo"
+disableKinds = ["taxonomyTerm"]
+
+[params]
+avatar = "images/icemirb.png"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts"
+    weight = 20

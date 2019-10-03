@@ -1,12 +1,15 @@
 .PHONY: github
 
-clean:
-	echo
-
 html:
 	cd site && hugo
 	echo "icemirb.org" > site/public/CNAME
 	touch site/public/.nojekyll
+
+clean:
+	rm -rf site/public
+
+serve:
+	@cd site && hugo --i18n-warnings server -D
 
 github: | clean html
 	./push_dir_to_repo.py \
